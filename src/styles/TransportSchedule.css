@@ -1,0 +1,58 @@
+.schedule-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #c03;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.days {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+h1 {
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+}
+
+.schedule-section {
+    padding: 15px;
+    border-top: 2px solid #ddd;
+}
+
+
+.day {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    color: #1a8;
+    margin-bottom: 10px;
+}
+
+.times {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.times span {
+    padding: 5px;
+    color: #c03;
+    font-weight: bold;
+}
