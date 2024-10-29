@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/raspisanie-ebanoe/static/css/main.6db66341.css",
+    "main.js": "/raspisanie-ebanoe/static/js/main.880a2875.js",
+    "static/js/453.af45fd42.chunk.js": "/raspisanie-ebanoe/static/js/453.af45fd42.chunk.js",
+    "index.html": "/raspisanie-ebanoe/index.html",
+    "main.6db66341.css.map": "/raspisanie-ebanoe/static/css/main.6db66341.css.map",
+    "main.880a2875.js.map": "/raspisanie-ebanoe/static/js/main.880a2875.js.map",
+    "453.af45fd42.chunk.js.map": "/raspisanie-ebanoe/static/js/453.af45fd42.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6db66341.css",
+    "static/js/main.880a2875.js"
+  ]
+}
