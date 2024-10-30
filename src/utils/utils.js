@@ -4,7 +4,7 @@ export function generateRandomTime() {
     return `${hours}:${minutes}`;
 }
 
-export function generateRandomSchedule(numTimes = 20) {
+export function generateRandomSchedule(numTimes = 90) {
     const schedule = [];
     for (let i = 0; i < numTimes; i++) {
         schedule.push(generateRandomTime());

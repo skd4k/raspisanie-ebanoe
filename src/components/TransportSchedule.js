@@ -21,7 +21,7 @@ const TransportSchedule = ({ id, routeName, weekdays, weekends }) => {
             <Title level={4} style={{textAlign: 'center', marginTop: '-15px'}}>{routeName}</Title>
 
             <div>
-                <Card className="schedule-section" title={<Title style={{ marginTop: '0' }} level={5}>Рабочие дни</Title>}>
+                <Card className="schedule-section" title={<Title style={{ marginTop: '0' }} level={5}>Рабочие дни:</Title>}>
                     <Row gutter={[8, 8]}>
                         {weekdays.map((time, index) => (
                             <Col key={index} span={4}> {/* 6 столбцов */}
@@ -43,19 +43,28 @@ const TransportSchedule = ({ id, routeName, weekdays, weekends }) => {
                         ))}
                     </Row>
                 </Card>
-
-                {/* Карточка для выходных дней */}
-                {/* <Card className="schedule-section" title={<Title level={5}>Выходные дни</Title>}>
+                <Card className="schedule-section" title={<Title style={{ marginTop: '0' }} level={5}>Выходные дни:</Title>}>
                     <Row gutter={[8, 8]}>
                         {weekends.map((time, index) => (
                             <Col key={index} span={4}>
-                                <Text strong style={{ display: 'block', color: '#fff', backgroundColor: '#ffb74d', padding: '6px 0', borderRadius: '4px', textAlign: 'center' }}>
+                                <Text 
+                                strong 
+                                className={isTimeInactive(time) ? 'inactive' : ''}
+                                style={{ 
+                                    display: 'block',
+                                        color: isTimeInactive(time) ? '#777' : '#fff',
+                                        backgroundColor: isTimeInactive(time) ? '#d3d3d3' : '#1e88e5',
+                                        padding: '6px 0',
+                                        borderRadius: '4px',
+                                        textAlign: 'center',
+                                        textDecoration: isTimeInactive(time) ? 'line-through' : 'none'
+                                }}>
                                     {time}
                                 </Text>
                             </Col>
                         ))}
                     </Row>
-                </Card> */}
+                </Card>
             </div>
         </div>
     );

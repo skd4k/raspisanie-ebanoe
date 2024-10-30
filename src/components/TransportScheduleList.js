@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import TransportSchedule from './TransportSchedule';
 import { scheduleData as initialScheduleData } from '../data/scheduleData';
 import { generateRandomSchedule } from '../utils/utils';
-
 import { Typography } from "antd";
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 function debounce(func, delay) {
     let timeout;
@@ -20,8 +19,8 @@ const TransportScheduleList = () => {
     const updateRandomTimes = () => {
         const newScheduleData = scheduleData.map(schedule => ({
             ...schedule,
-            weekdays: generateRandomSchedule(schedule.weekdays.length),
-            // weekends: generateRandomSchedule(schedule.weekends.length),
+            weekdays: generateRandomSchedule(95), // Генерация 20 значений, если массив пустой
+            weekends: generateRandomSchedule(95),
         }));
         setScheduleData(newScheduleData);
     };
@@ -29,22 +28,27 @@ const TransportScheduleList = () => {
     const debouncedUpdateRandomTimes = debounce(updateRandomTimes, 200);
 
     useEffect(() => {
+        updateRandomTimes();
+    
         const handleScroll = () => {
             debouncedUpdateRandomTimes();
         };
-
+    
         window.addEventListener('scroll', handleScroll);
         
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [scheduleData]);
+    }, []);
 
     return (
         <div>
-            <Title style={{ textAlign:'center', marginBottom: '30px' }}>ебаное расписание ярославского транспорта би лайк</Title>
+            <Title style={{ textAlign: 'center', marginBottom: '30px' }}>
+                ебаное расписание ярославского транспорта би лайк
+            </Title>
             {scheduleData.map((schedule) => (
                 <TransportSchedule
+                    key={schedule.id}
                     id={schedule.id}
                     routeName={schedule.routeName}
                     weekdays={schedule.weekdays}
