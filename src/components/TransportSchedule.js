@@ -37,7 +37,7 @@ const TransportSchedule = ({ id, routeName }) => {
                             {weekdays.map((time, index) => (
                                 <Col
                                     key={index}
-                                    xs={12} sm={8} md={6} lg={4} xl={4} // Установка адаптивных значений
+                                    xs={6} sm={4} md={2} lg={2} xl={2} // Установка адаптивных значений
                                 >
                                     <Text
                                         strong
