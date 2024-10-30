@@ -16,3 +16,15 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+
+@media (max-width: 1500px) {
+    .schedule-container {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .schedule-section {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+}

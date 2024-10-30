@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Typography, Card, Row, Col } from "antd";
-import '../styles/TransportSchedule.css'
-import {generateRandomSchedule} from '../utils/utils';
+import '../styles/TransportSchedule.css';
+import { generateRandomSchedule } from '../utils/utils';
 const { Title, Text } = Typography;
 
 const TransportSchedule = ({ id, routeName }) => {
@@ -35,7 +35,10 @@ const TransportSchedule = ({ id, routeName }) => {
                     <Card className="schedule-section" title={<Title level={5}>Рабочие дни:</Title>}>
                         <Row gutter={[8, 8]}>
                             {weekdays.map((time, index) => (
-                                <Col key={index} span={4}>
+                                <Col
+                                    key={index}
+                                    xs={12} sm={8} md={6} lg={4} xl={4} // Установка адаптивных значений
+                                >
                                     <Text
                                         strong
                                         style={{
@@ -57,7 +60,10 @@ const TransportSchedule = ({ id, routeName }) => {
                     <Card className="schedule-section" title={<Title level={5}>Выходные дни:</Title>}>
                         <Row gutter={[8, 8]}>
                             {weekends.map((time, index) => (
-                                <Col key={index} span={4}>
+                                <Col
+                                    key={index}
+                                    xs={12} sm={8} md={6} lg={4} xl={4} // Адаптивные значения
+                                >
                                     <Text
                                         strong
                                         style={{
