@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/raspisanie-ebanoe/static/css/main.6db66341.css",
-    "main.js": "/raspisanie-ebanoe/static/js/main.8bd35a50.js",
+    "main.css": "/raspisanie-ebanoe/static/css/main.efe6dabb.css",
+    "main.js": "/raspisanie-ebanoe/static/js/main.5ed341cd.js",
     "static/js/453.af45fd42.chunk.js": "/raspisanie-ebanoe/static/js/453.af45fd42.chunk.js",
     "index.html": "/raspisanie-ebanoe/index.html",
-    "main.6db66341.css.map": "/raspisanie-ebanoe/static/css/main.6db66341.css.map",
-    "main.8bd35a50.js.map": "/raspisanie-ebanoe/static/js/main.8bd35a50.js.map",
+    "main.efe6dabb.css.map": "/raspisanie-ebanoe/static/css/main.efe6dabb.css.map",
+    "main.5ed341cd.js.map": "/raspisanie-ebanoe/static/js/main.5ed341cd.js.map",
     "453.af45fd42.chunk.js.map": "/raspisanie-ebanoe/static/js/453.af45fd42.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6db66341.css",
-    "static/js/main.8bd35a50.js"
+    "static/css/main.efe6dabb.css",
+    "static/js/main.5ed341cd.js"
   ]
 }
