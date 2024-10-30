@@ -51,8 +51,6 @@ const TransportScheduleList = () => {
                     key={schedule.id}
                     id={schedule.id}
                     routeName={schedule.routeName}
-                    weekdays={schedule.weekdays}
-                    weekends={schedule.weekends}
                 />
             ))}
         </div>

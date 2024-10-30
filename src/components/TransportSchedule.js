@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import { Typography, Card, Row, Col } from "antd";
 import '../styles/TransportSchedule.css'
+import {generateRandomSchedule} from '../utils/utils';
 const { Title, Text } = Typography;
 
-const TransportSchedule = ({ id, routeName, weekdays = [], weekends = [] }) => {
-    // Текущая дата и время
+const TransportSchedule = ({ id, routeName }) => {
     const now = new Date();
+
+    // Инициализация расписаний
+    const weekdays = generateRandomSchedule(93);
+    const weekends = generateRandomSchedule(93);
 
     // Проверка на неактуальное время
     const isTimeInactive = (time) => {
@@ -14,21 +18,15 @@ const TransportSchedule = ({ id, routeName, weekdays = [], weekends = [] }) => {
         return timeDate < now;
     };
 
-    // Состояние для раскрытия/сворачивания
+    // Переключение видимости расписания
     const [isExpanded, setIsExpanded] = useState(false);
-
-    // Обработчик клика для раскрытия/сворачивания
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
     };
 
     return (
         <div className="schedule-container">
-            <Title 
-                level={3} 
-                style={{ cursor: 'pointer', textAlign: 'center', marginTop: '5px' }} 
-                onClick={toggleExpand} 
-            >
+            <Title level={3} style={{ cursor: 'pointer', textAlign: 'center', marginTop: '5px' }} onClick={toggleExpand}>
                 Маршрут №{id} - {routeName}
             </Title>
 
@@ -40,7 +38,6 @@ const TransportSchedule = ({ id, routeName, weekdays = [], weekends = [] }) => {
                                 <Col key={index} span={4}>
                                     <Text
                                         strong
-                                        className={isTimeInactive(time) ? 'inactive' : ''}
                                         style={{
                                             display: 'block',
                                             color: isTimeInactive(time) ? '#777' : '#fff',
@@ -63,7 +60,6 @@ const TransportSchedule = ({ id, routeName, weekdays = [], weekends = [] }) => {
                                 <Col key={index} span={4}>
                                     <Text
                                         strong
-                                        className={isTimeInactive(time) ? 'inactive' : ''}
                                         style={{
                                             display: 'block',
                                             color: isTimeInactive(time) ? '#777' : '#fff',
@@ -85,6 +81,5 @@ const TransportSchedule = ({ id, routeName, weekdays = [], weekends = [] }) => {
         </div>
     );
 };
-
 
 export default TransportSchedule;
